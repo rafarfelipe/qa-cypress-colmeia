@@ -3,8 +3,6 @@
 **Projeto:** Colmeia - Sistema de Gestão  
 **URL de Teste:** https://teste-colmeia-qa.colmeia-corp.com/  
 **Data:** 2026-05-08  
-**QA Responsável:** [Seu Nome]  
-**Ferramenta:** Testes manuais exploratórios + Cypress
 
 ---
 

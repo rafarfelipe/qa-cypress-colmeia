@@ -1,4 +1,4 @@
-# Casos de Teste Automatizados - Colmeia QA
+# 🧪 Casos de Teste Automatizados - Colmeia QA
 
 ## Visão Geral
 
@@ -10,18 +10,38 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 | **URL de Teste** | https://teste-colmeia-qa.colmeia-corp.com/ |
 | **Ferramenta** | Cypress |
 | **Data** | 2026-05-08 |
-| **Responsável** | [Seu Nome] |
+| **Responsável** | Rafael Felipe |
+| **Total de Casos** | **16** |
 
 ---
 
-## Índice
+## 📊 Estatísticas do Projeto
 
-1. [Login](#login)
-2. [Bancos de Dados](#bancos-de-dados)
+![Cypress](https://img.shields.io/badge/Cypress-15+-green?style=flat)
+![Bugs](https://img.shields.io/badge/Bugs-14-red?style=flat)
+![Testes](https://img.shields.io/badge/Testes-16-blue?style=flat)
+![Taxa de Sucesso](https://img.shields.io/badge/Sucesso-56.25%25-yellow?style=flat)
 
 ---
 
-## 1. Login (`cypress/e2e/login.cy.js`) {#login}
+## 📁 Documentação
+
+| Arquivo | Descrição |
+|---------|-------------|
+| [📋 bugs.md](bugs.md) | **14 bugs** documentados (1 crítico, 6 altos) |
+| [✅ casos-de-teste.md](casos-de-teste.md) | **16 casos** automatizados (56,25% sucesso) |
+| [🔍 testes-exploratorios.md](testes-exploratorios.md) | Testes manuais exploratórios |
+
+---
+
+## 📝 Índice
+
+1. [Login](#1-login)
+2. [Bancos de Dados](#2-bancos-de-dados)
+
+---
+
+## 1. Login (`cypress/e2e/login.cy.js`) {#1-login}
 
 ### 1.1 Validação de Interface
 
@@ -32,9 +52,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 **Pré-condições:** Nenhuma
 
 **Dados Utilizados:** N/A
-
-**Evidência:**  
-![CT-001](evidencias/screenshots/Login%20--%20CT-001%20Deve%20autenticar%20com%20credenciais%20válidas%20sem%20exibir%20popup%20de%20erro%20(failed).png)
 
 ---
 
@@ -49,9 +66,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 **Dados Utilizados:**
 - Email: `qa@test.com`
 - Senha: `123456`
-
-**Evidência:**  
-![CT-002](evidencias/screenshots/login-bug001.gif)
 
 **Bug Relacionado:** BUG001 - Mensagem de confirmação exibe texto incorreto
 
@@ -75,17 +89,13 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 | CT-LOGIN-005 | (vazio) | (vazio) |
 | CT-LOGIN-006 | `qa@test.com` | `123456` |
 
-**Evidências:**
-- CT-LOGIN-003 e 004: ![Bug 003](evidencias/screenshots/bug-003.png)
-- CT-LOGIN-006: ![Bug 004](evidencias/screenshots/bug004.gif)
-
 **Bugs Relacionados:**
 - BUG003 - Mensagem de erro mal posicionada
 - BUG004 - Modal fecha ao clicar fora
 
 ---
 
-## 2. Bancos de Dados (`cypress/e2e/bancodados.cy.js`) {#bancos-de-dados}
+## 2. Bancos de Dados (`cypress/e2e/bancodados.cy.js`) {#2-bancos-de-dados}
 
 ### 2.1 Validação de Interface
 
@@ -98,8 +108,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 
 **Dados Utilizados:** N/A
 
-**Evidência:** N/A
-
 ---
 
 ### 2.2 Validações de Campo
@@ -111,8 +119,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 **Pré-condições:** Modal de criação aberto
 
 **Dados Utilizados:** Campo nome vazio
-
-**Evidência:** ![Bug 011](evidencias/screenshots/bug011.png)
 
 **Bug Relacionado:** BUG011 - Sistema aceita caracteres especiais sem validação
 
@@ -128,8 +134,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 
 **Dados Utilizados:** Nome dinâmico: `Banco ${Date.now()}`
 
-**Evidência:** N/A
-
 ---
 
 ### 2.4 Caminho Não Feliz - Duplicidade
@@ -141,8 +145,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 **Pré-condições:** Modal de criação aberto
 
 **Dados Utilizados:** Nome duplicado: `Banco Duplicado ${Date.now()}`
-
-**Evidência:** ![Bug 009](evidencias/screenshots/bug009.png)
 
 **Bug Relacionado:** BUG009 - Sistema permite cadastro duplicado
 
@@ -158,8 +160,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 
 **Dados Utilizados:** Campo nome vazio, insistir no salvamento
 
-**Evidência:** ![Bug 010](evidencias/screenshots/bug010.gif)
-
 **Bug Relacionado:** BUG010 - Sistema permite salvar item vazio após insistência
 
 ---
@@ -173,8 +173,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 **Pré-condições:** Modal de criação aberto
 
 **Dados Utilizados:** Apenas caracteres especiais
-
-**Evidência:** ![Bug 011](evidencias/screenshots/bug011.png)
 
 **Bug Relacionado:** BUG011 - Sistema aceita caracteres especiais sem validação
 
@@ -190,8 +188,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 
 **Dados Utilizados:** Nome muito extenso
 
-**Evidência:** ![Bug 012](evidencias/screenshots/bug012.gif)
-
 **Bug Relacionado:** BUG012 - Nome longo quebra layout
 
 ---
@@ -205,8 +201,6 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 **Pré-condições:** Itens cadastrados na listagem
 
 **Dados Utilizados:** Criar itens, clicar em refresh
-
-**Evidência:** ![Bug 013](evidencias/screenshots/bug013.gif)
 
 **Bug Relacionado:** BUG013 - Refresh remove todos os itens
 
@@ -222,55 +216,40 @@ Este documento apresenta os casos de teste automatizados desenvolvidos com **Cyp
 
 **Dados Utilizados:** Criar item, arquivar, acessar arquivados
 
-**Evidência:** ![Bug 014](evidencias/screenshots/bug014.gif)
-
-**Bug Relacionado:** BUG014 - Arquivados não exibe itens
+**Bug Relacionado:** BUG014 - Arquivados não exibem itens
 
 ---
 
-## Resumo Executivo
+## 🎯 Resumo Executivo
 
 ### Estatísticas de Teste
 
 | Módulo | Total de Casos | ✅ Passou | ❌ Falhou | Taxa de Sucesso |
 |--------|----------------|-----------|----------|------------------|
-| Login | 6 | 6 | 0 | 100% |
-| Bancos de Dados | 10 | 3 | 7 | 30% |
+| Login | 6 | 6 | 0 | **100%** |
+| Bancos de Dados | 10 | 3 | 7 | **30%** |
 | **Total** | **16** | **9** | **7** | **56,25%** |
 
-### Bughs Documentados
+### Bugs Encontrados
 
-| ID | Título | Severidade | Prioridade | Status |
-|----|-------|------------|------------|--------|
-| BUG001 | Mensagem de confirmação exibe texto incorreto | Baixa | Baixa | Aberto |
-| BUG002 | Link "Esqueceu sua senha?" não funciona | Alta | Alta | Aberto |
-| BUG003 | Mensagem de erro mal posicionada | Baixa | Baixa | Aberto |
-| BUG004 | Modal fecha ao clicar fora | Baixa | Média | Aberto |
-| BUG005 | Dropdown "Candidato" não funciona | Alta | Alta | Aberto |
-| BUG006 | Botão de menu não intuitivo | Baixa | Média | Aberto |
-| BUG007 | Link "Colmeia Forms" não funciona | Alta | Alta | Aberto |
-| BUG008 | Modal sem cancelamento e fecha ao clicar fora | Baixa | Média | Aberto |
-| BUG009 | Sistema permite cadastro duplicado | Média | Média | Aberto |
-| BUG010 | Sistema permite salvar vazio após insistência | Alta | Alta | Aberto |
-| BUG011 | Sistema aceita caracteres especiais | Média | Média | Aberto |
-| BUG012 | Nome longo quebra layout | Alta | Alta | Aberto |
-| BUG013 | Refresh remove todos os itens | Crítica | Alta | Aberto |
-| BUG014 | Arquivados não exibe itens | Alta | Alta | Aberto |
-
-**Total de bugs encontrados:** 14  
-**Bugs críticos:** 1  
-**Bugs de alta severidade:** 6  
-**Bugs de média severidade:** 3  
-**Bugs de baixa severidade:** 4
+| Severidade | Quantidade | Prioridade Alta |
+|------------|-----------|-----------------|
+| 🔴 Crítica | 1 | BUG013 |
+| 🟠 Alta | 6 | BUG002, BUG005, BUG007, BUG010, BUG012, BUG014 |
+| 🟡 Média | 3 | BUG006, BUG009, BUG011 |
+| 🟢 Baixa | 4 | BUG001, BUG003, BUG004, BUG008 |
 
 ---
 
-## Conclusão
+## 🎯 Recomendações
 
-O sistema apresenta **14 bugs documentados**, sendo 1 crítico e 6 de alta severidade. A taxa de sucesso dos testes automatizados foi de **56,25%**, indicando necessidade de correções principalmente no módulo de Bancos de Dados.
+1. **Priorizar correção de bugs críticos** (BUG013 - refresh remove itens)
+2. **Implementar validações de formulário** consistentes
+3. **Adicionar atributos `data-cy`** para facilitar automação
+4. **Melhorar feedback visual** para o usuário
+5. **Corrigir links que não funcionam** (esqueceu senha, forms, dropdown)
 
-**Recomendações:**
-1. Priorizar correção de bugs críticos (BUG013)
-2. Implementar validações de formulário consistentes
-3. Adicionar atributos `data-cy` para facilitar automação
-4. Melhorar feedback visual para o usuário
+---
+
+**Data:** 2026-05-08  
+**QA Responsável:** Rafael Felipe

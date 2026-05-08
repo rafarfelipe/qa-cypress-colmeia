@@ -3,8 +3,6 @@
 **Projeto:** Colmeia - Sistema de Gestão  
 **URL de Teste:** https://teste-colmeia-qa.colmeia-corp.com/  
 **Data:** 2026-05-08  
-**QA Responsável:** [Seu Nome]  
-**Ferramenta:** Cypress + Testes Manuais  
 
 ---
 
@@ -59,7 +57,7 @@ O popup de confirmação está exibindo texto inadequado para o cenário de suce
 
 ### Evidências
 **GIF Demonstrativo:**  
-![Bug 001 - GIF demonstrativo](evidencias/screenshots/login-bug001.gif)
+![Bug 001 - GIF demonstrativo](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/login-bug001.gif)
 
 ---
 
@@ -91,7 +89,7 @@ Nenhuma ação é executada ao clicar no link
 O elemento possui comportamento visual de link (cursor pointer), porém aparenta não possuir evento de clique ou rota associada, indicando possível falha na implementação ou binding de evento.
 
 ### Evidência
-![Bug 002 - Link não clicável](evidencias/screenshots/bug-002.png)
+![Bug 002 - Link não clicável](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug-002.png)
 
 ---
 
@@ -126,7 +124,7 @@ Ao inserir credenciais inválidas no login, a mensagem "Usuário ou senha invál
 A validação parece não distinguir corretamente o tipo de erro (credencial inválida vs. erro de campo), aplicando a mesma mensagem para múltiplos inputs.
 
 ### Evidência
-![Bug 003 - Mensagem de erro](evidencias/screenshots/bug-003.png)
+![Bug 003 - Mensagem de erro](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug-003.png)
 
 ---
 
@@ -159,7 +157,7 @@ O modal fecha, o usuário retorna para a tela de login e precisa clicar novament
 O modal aparenta permitir dismiss externo sem tratamento adequado do fluxo, causando quebra de experiência e possível perda de estado da ação iniciada.
 
 ### Evidência
-![Bug 004 - Modal fecha ao clicar fora](evidencias/screenshots/bug004.gif)
+![Bug 004 - Modal fecha ao clicar fora](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug004.gif)
 
 ---
 
@@ -190,7 +188,7 @@ Exibir opções como:
 Nenhuma ação ocorre ao clicar no dropdown.
 
 ### Evidência
-![Bug 005 - Dropdown não funciona](evidencias/screenshots/bug005.png)
+![Bug 005 - Dropdown não funciona](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug005.png)
 
 ---
 
@@ -218,7 +216,7 @@ Um ícone mais claro (ex: menu/hamburger)
 Usuário não entende a função do botão
 
 ### Evidência
-![Bug 006 - Botão não intuitivo](evidencias/screenshots/bug006.png)
+![Bug 006 - Botão não intuitivo](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug006.png)
 
 ---
 
@@ -249,7 +247,7 @@ Nenhuma ação ocorre ao clicar no link.
 O elemento possui um atributo href (/dashboard/campanha/colmeia-forms), porém a navegação não acontece, indicando possível falha de roteamento ou evento não tratado.
 
 ### Evidência
-![Bug 007 - Link não funciona](evidencias/screenshots/bug007.gif)
+![Bug 007 - Link não funciona](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug007.gif)
 
 ---
 
@@ -286,7 +284,7 @@ Ao clicar em "Criar" na tela de "Bancos de dados", o modal de criação exibe ap
 O modal permite dismiss externo sem tratamento do estado do formulário, causando perda de dados e quebra de fluxo.
 
 ### Evidência
-![Bug 008 - Modal sem cancelamento](evidencias/screenshots/bug008.gif)
+![Bug 008 - Modal sem cancelamento](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug008.gif)
 
 ---
 
@@ -321,7 +319,7 @@ O sistema cria múltiplos itens com o mesmo nome sem validação ou feedback.
 Não está claro se a duplicidade é permitida por regra de negócio. Na ausência dessa definição, o comportamento deve ser tratado como possível falha de validação.
 
 ### Evidência
-![Bug 009 - Duplicidade permitida](evidencias/screenshots/bug009.png)
+![Bug 009 - Duplicidade permitida](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug009.png)
 
 ---
 
@@ -354,7 +352,7 @@ Mesmo com a validação exibida, o item acaba sendo criado.
 Há inconsistência entre a validação visual e a regra efetiva de persistência, indicando falha na validação do formulário no momento do submit.
 
 ### Evidência
-![Bug 010 - Salvamento com campo vazio](evidencias/screenshots/bug010.gif)
+![Bug 010 - Salvamento com campo vazio](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug010.gif)
 
 ---
 
@@ -387,7 +385,7 @@ O sistema aceita caracteres especiais sem qualquer feedback ou restrição.
 Na ausência de regra explícita na interface, o comportamento gera ambiguidade de negócio e risco de inconsistência de dados.
 
 ### Evidência
-![Bug 011 - Caracteres especiais](evidencias/screenshots/bug011.png)
+![Bug 011 - Caracteres especiais](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug011.png)
 
 ---
 
@@ -420,7 +418,7 @@ A listagem exibe o conteúdo de forma descontrolada, quebrando o layout.
 Ausência de validação de tamanho máximo e/ou tratamento visual para overflow de conteúdo.
 
 ### Evidência
-![Bug 012 - Nome longo quebra layout](evidencias/screenshots/bug012.gif)
+![Bug 012 - Nome longo quebra layout](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug012.gif)
 
 ---
 
@@ -452,7 +450,7 @@ Todos os itens desaparecem da listagem.
 A ação de refresh aparenta executar comportamento destrutivo ou reset indevido do estado/dados exibidos.
 
 ### Evidência
-![Bug 013 - Refresh remove itens](evidencias/screenshots/bug013.gif)
+![Bug 013 - Refresh remove itens](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug013.gif)
 
 ---
 
@@ -485,7 +483,7 @@ O item some da listagem principal, mas não aparece na área de arquivados.
 Há indício de falha na persistência do status de arquivamento ou na recuperação/renderização dos itens arquivados.
 
 ### Evidência
-![Bug 014 - Arquivados não exibem itens](evidencias/screenshots/bug014.gif)
+![Bug 014 - Arquivados não exibem itens](https://raw.githubusercontent.com/rafarfelipe/qa-cypress-colmeia/main/docs/evidencias/screenshots/bug014.gif)
 
 ---
 
