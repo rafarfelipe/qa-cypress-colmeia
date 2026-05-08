@@ -1,0 +1,17 @@
+{
+  "name": "qa-cypress-colmeia",
+  "version": "1.0.0",
+  "description": "Automação de testes Cypress - Colmeia QA Teste Técnico",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:login": "cypress run --spec 'cypress/e2e/login.cy.js'",
+    "test:bancodados": "cypress run --spec 'cypress/e2e/bancodados.cy.js'"
+  },
+  "devDependencies": {
+    "cypress": "^15.14.2"
+  },
+  "author": "Rafael Felipe",
+  "license": "MIT"
+}

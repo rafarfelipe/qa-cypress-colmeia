@@ -1,0 +1,26 @@
+node_modules/
+cypress/videos/
+cypress/screenshots/
+docs/evidencias/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development
+.env.test
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
