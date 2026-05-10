@@ -126,9 +126,6 @@ cy.navigateToBancoDados()
 
 As evidências (screenshots e GIFs) estão disponíveis em `docs/evidencias/screenshots/` e são renderizadas diretamente nos arquivos de documentação.
 
-**Exemplo:**
-![Bug 001 - GIF demonstrativo](docs/evidencias/screenshots/login-bug001.gif)
-
 ---
 
 ## 🎯 Recomendações
